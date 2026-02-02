@@ -31,7 +31,7 @@ body {
     /* Put your background image in the repo as e.g. hero.jpg */
     background-image:
         linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
-        url("hero.jpg");
+        url("ven3.jpg");
     background-size: cover;
     background-position: center;
     color: var(--white);
