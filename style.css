@@ -1,25 +1,222 @@
+/* Base */
+:root {
+    --text: #0f172a;
+    --muted: rgba(15, 23, 42, 0.7);
+    --white: #ffffff;
+    --card: rgba(255, 255, 255, 0.92);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* clicking tabs scrolls nicely */
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: #f6f7fb;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
+/* HERO */
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    /* Put your background image in the repo as e.g. hero.jpg */
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
+        url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
 }
 
-p {
-    color: #666;
-    line-height: 1.6;
-    margin: 20px;
+/* Top nav */
+.nav {
+    position: sticky; /* stays visible at top while scrolling */
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
+    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 10, 0.25);
 }
 
-a {
-    color: #007bff;
+.brand {
+    letter-spacing: 1px;
+    font-weight: 700;
     text-decoration: none;
+    color: var(--white);
 }
 
-a:hover {
+.nav-links {
+    display: flex;
+    gap: 18px;
+}
+
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.nav a:hover {
+    opacity: 1;
     text-decoration: underline;
+}
+
+/* Center content on hero */
+.hero-content {
+    min-height: calc(100vh - 64px);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 40px 18px;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow);
+    margin: 0 auto 18px;
+
+    /* Option A: use a photo (put avatar.jpg in repo) */
+    background-image: url("avatar.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* If you don't have avatar.jpg yet, comment the 3 lines above
+     and you'll just see a white circle */
+    border: 4px solid rgba(255, 255, 255, 0.75);
+}
+
+.hero-title {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: 0.5px;
+}
+
+.hero-subtitle {
+    margin: 10px auto 22px;
+    max-width: 720px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn.primary {
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    border-color: transparent;
+}
+
+.btn.ghost {
+    color: var(--white);
+}
+
+/* MAIN */
+.main {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+    padding: 48px 0 24px;
+}
+
+.section {
+    padding: 28px 0;
+}
+
+.section h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.section p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Cards for CV / Projects */
+.cards {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin: 0 0 8px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.links {
+    margin-top: 12px !important;
+    display: flex;
+    gap: 12px;
+}
+
+.links a {
+    color: #0b5fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 12px 50px;
+    color: rgba(15, 23, 42, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
 }
