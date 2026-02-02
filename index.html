@@ -1,14 +1,129 @@
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial scale = 1.0">
-        <title>Homepage</title>
-        <link rel = "stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Luca Cerasoli</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
-        <h1>Homepage</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, sed? Modi fugiat sint beatae itaque officia odio ex maxime rerum voluptate repellendus, quae nesciunt in laudantium numquam magnam cupiditate incidunt?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, sed? Modi fugiat sint beatae itaque officia odio ex maxime rerum voluptate repellendus, quae nesciunt in laudantium numquam magnam cupiditate incidunt?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, sed? Modi fugiat sint beatae itaque officia odio ex maxime rerum voluptate repellendus, quae nesciunt in laudantium numquam magnam cupiditate incidunt?</p>
+        <!-- HERO -->
+        <header class="hero" id="top">
+            <nav class="nav">
+                <a class="brand" href="#top">LUCA CERASOLI</a>
+
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#cv">C.V.</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+
+            <div class="hero-content">
+                <div class="avatar" aria-hidden="true"></div>
+
+                <h1 class="hero-title">Luca Cerasoli</h1>
+                <p class="hero-subtitle">
+                    Your short tagline goes here (e.g., “MSc Student • Data •
+                    Copulas”).
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">See projects</a>
+                    <a class="btn ghost" href="#contact">Get in touch</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <section class="section" id="about">
+                <h2>About</h2>
+                <p>
+                    Write a short intro here. What you do, what you’re
+                    interested in, what you’re building.
+                </p>
+            </section>
+
+            <section class="section" id="cv">
+                <h2>C.V.</h2>
+                <p>
+                    Link to a PDF if you want:
+                    <a href="cv.pdf" target="_blank" rel="noopener"
+                        >Download my CV</a
+                    >
+                </p>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Education</h3>
+                        <p>Example: MSc in …, University …</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Experience</h3>
+                        <p>Example: Research assistant, …</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Skills</h3>
+                        <p>Example: R, Python, LaTeX, time series, copulas…</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="projects">
+                <h2>Projects</h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Project title</h3>
+                        <p>
+                            1–2 lines describing what it is and what you used.
+                        </p>
+                        <p class="links">
+                            <a href="#" target="_blank" rel="noopener">Demo</a>
+                            <a href="#" target="_blank" rel="noopener"
+                                >GitHub</a
+                            >
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Another project</h3>
+                        <p>Short description.</p>
+                        <p class="links">
+                            <a href="#" target="_blank" rel="noopener"
+                                >GitHub</a
+                            >
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <h2>Contact</h2>
+                <p>
+                    Email: <a href="mailto:you@example.com">you@example.com</a
+                    ><br />
+                    LinkedIn:
+                    <a href="#" target="_blank" rel="noopener">your profile</a
+                    ><br />
+                    GitHub:
+                    <a href="#" target="_blank" rel="noopener">your username</a>
+                </p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Luca Cerasoli</p>
+        </footer>
+
+        <script>
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        </script>
     </body>
 </html>
